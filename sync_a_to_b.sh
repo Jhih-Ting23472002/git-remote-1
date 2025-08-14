@@ -2,8 +2,8 @@
 # 將 a 專案完整同步到 b，並設定之後自動推送到 a 與 b
 # 使用前請修改以下兩個變數
 
-A_REPO="https://github.com/Jhih-Ting23472002/git-remote-1.git"
-B_REPO="https://github.com/Jhih-Ting23472002/git-remote-3.git"
+A_REPO="{{a資料庫位置}}"
+B_REPO="{{b資料庫位置}}"
 
 set -e
 
