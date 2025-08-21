@@ -9,6 +9,7 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
         "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:@ngrx/recommended",
         "plugin:prettier/recommended"
       ],
       "rules": {
@@ -28,14 +29,27 @@
             "style": "kebab-case"
           }
         ],
-        "@typescript-eslint/explicit-function-return-type": "warn",
+        "@typescript-eslint/explicit-function-return-type": [
+          "warn",
+          {
+            "allowExpressions": true,
+            "allowTypedFunctionExpressions": true
+          }
+        ],
         "@typescript-eslint/no-explicit-any": "warn",
         "@typescript-eslint/no-unused-vars": [
           "warn",
           {
             "argsIgnorePattern": "^_"
           }
-        ]
+        ],
+        "@ngrx/prefer-action-creator": "error",
+        "@ngrx/no-store-subscription": "error",
+        "@ngrx/prefer-concat-latest-from": "error",
+        "@ngrx/good-action-hygiene": "error",
+        "@ngrx/no-multiple-global-stores": "error",
+        "@ngrx/with-state-no-arrays-at-root-level": "error",
+        "@ngrx/signal-state-no-arrays-at-root-level": "error"
       }
     },
     {
